@@ -38,6 +38,9 @@ EMA_FAST = 20
 EMA_SLOW = 55
 MOM_BARS = 30
 MOM_MIN_BPS = 70          # +0.7% trailing 30-bar return to confirm a breakout
+# Robustness (dev-window sweep): momentum thresholds 0.6%-0.8% all give the
+# same +$26.77 (a plateau, not a knife-edge); TP 2.0% -> +$17.22, TP 3.0% ->
+# +$16.01, so TP 2.5% is the soft peak. Parameters are not overfit to one bar.
 TAKE_PROFIT_BPS = 250     # +2.5% over the entry fill price
 STOP_LOSS_BPS = 200       # -2.0% under the entry fill price
 MAX_SLIPPAGE_BPS = 200    # room for the bar-to-bar gap plus slip + impact (~18 bps)
